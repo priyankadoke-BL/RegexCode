@@ -30,6 +30,31 @@ public class Validation {
         }
         return null;
     }
+    public String EmailValidation()
+    {
+        boolean flag = true;
+        String patternEx = "[A-Za-z]{3,}";
+        pattern = Pattern.compile(patternEx);
+
+        while (flag) {
+            System.out.println("Please enter Valid Email");
+            String email = scanner.nextLine();
+            Matcher matcher = pattern.matcher(email);
+            System.out.println(12/0);
+            boolean result = matcher.matches();
+            if (result) {
+                flag = false;
+                return email;
+
+
+            }
+        }
+        return null;
+    }
+
+
+
 }
+
 
 
